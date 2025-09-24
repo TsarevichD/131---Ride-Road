@@ -194,7 +194,6 @@ struct CarsView: View {
     }
 }
 
-// Карточка автомобиля
 struct CarCardView: View {
     let car: Car
     let colors: (deepBlue: Color, steelBlue: Color, lightBlue: Color, darkBlue: Color, goldenYellow: Color, emeraldGreen: Color, slateGray: Color)
@@ -202,7 +201,6 @@ struct CarCardView: View {
     
     var body: some View {
         HStack(spacing: AdaptiveSize.spacing(15)) {
-            // Эмодзи автомобиля
             Text(car.emoji)
                 .font(.system(size: AdaptiveSize.iconSize(30)))
                 .scaleEffect(isAnimating ? 1.1 : 1.0)
@@ -251,7 +249,6 @@ struct CarCardView: View {
             
             Spacer()
             
-            // Статус состояния
             VStack(alignment: .trailing, spacing: AdaptiveSize.spacing(4)) {
                 Text(car.condition.emoji)
                     .font(.system(size: AdaptiveSize.iconSize(16)))
@@ -299,7 +296,6 @@ struct AddCarView: View {
         NavigationView {
             GeometryReader { geometry in
                 ZStack {
-                    // Яркий градиентный фон
                     LinearGradient(
                         gradient: Gradient(colors: [
                             colors.deepBlue,

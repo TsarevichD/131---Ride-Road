@@ -105,7 +105,6 @@ struct AnalizView: View {
                                         isAnimating: isAnimating
                                     )
                                     
-                                    // Автомобили в отличном состоянии
                                     StatCardView(
                                         title: "Excellent Cars",
                                         value: "\(getExcellentCarsCount())",
@@ -140,7 +139,6 @@ struct AnalizView: View {
                                 .adaptivePadding(.horizontal, 20)
                             }
                             
-                            // Статистика по коллекциям мотоциклов
                             if !rideMemory.motorcycleCollections.isEmpty {
                                 VStack(spacing: 20) {
                                     Text("Motorcycle Collection Details")
@@ -156,7 +154,6 @@ struct AnalizView: View {
                                 .adaptivePadding(.horizontal, 20)
                             }
                             
-                            // Статистика по типам автомобилей
                             VStack(spacing: 20) {
                                 Text("Cars by Type")
                                     .adaptiveFont(.title, size: 24)
@@ -180,7 +177,6 @@ struct AnalizView: View {
                             }
                             .adaptivePadding(.horizontal, 20)
                             
-                            // Статистика по типам мотоциклов
                             VStack(spacing: 20) {
                                 Text("Motorcycles by Type")
                                     .adaptiveFont(.title, size: 24)
@@ -314,7 +310,6 @@ struct StatCardView: View {
     }
 }
 
-// Карточка статистики коллекции автомобилей
 struct CarCollectionStatCardView: View {
     let collection: CarCollection
     let isAnimating: Bool
@@ -590,7 +585,6 @@ struct AnimatedDecorations: View {
     
     var body: some View {
         ZStack {
-            // Тонкие декоративные линии
             ForEach(0..<4, id: \.self) { index in
                 Rectangle()
                     .fill(
@@ -618,7 +612,6 @@ struct AnimatedDecorations: View {
                     )
             }
             
-            // Мягкие круги
             ForEach(0..<3, id: \.self) { index in
                 Circle()
                     .fill(
@@ -646,7 +639,6 @@ struct AnimatedDecorations: View {
                     )
             }
             
-            // Тонкие геометрические формы
             ForEach(0..<2, id: \.self) { index in
                 RoundedRectangle(cornerRadius: 8)
                     .fill(

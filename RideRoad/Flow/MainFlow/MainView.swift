@@ -190,7 +190,6 @@ struct NavigationButton: View {
     var body: some View {
         Button(action: action) {
             HStack(spacing: AdaptiveSize.spacing(16)) {
-                // Иконка
                 ZStack {
                     Circle()
                         .fill(

@@ -207,7 +207,6 @@ struct MotorcycleCardView: View {
     
     var body: some View {
         HStack(spacing: AdaptiveSize.spacing(15)) {
-            // Эмодзи мотоцикла
             Text(motorcycle.emoji)
                 .font(.system(size: AdaptiveSize.iconSize(30)))
                 .scaleEffect(isAnimating ? 1.1 : 1.0)

@@ -147,6 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RideRoad/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ride Road";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs a camera so that the user can take profile pictures";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires a camera so that the user can take a profile photo from the library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -159,7 +160,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tsarevcih.RideRoad;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carsroadbike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -180,6 +181,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RideRoad/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ride Road";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs a camera so that the user can take profile pictures";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires a camera so that the user can take a profile photo from the library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -192,7 +194,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tsarevcih.RideRoad;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carsroadbike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

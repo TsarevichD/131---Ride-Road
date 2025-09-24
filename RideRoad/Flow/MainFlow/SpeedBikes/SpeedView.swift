@@ -427,7 +427,6 @@ struct MotorcycleCollectionCardView: View {
         .adaptivePadding(.vertical, 16)
         .background(
             ZStack {
-                // Основной фон
                 RoundedRectangle(cornerRadius: AdaptiveSize.cornerRadius(20))
                     .fill(
                         LinearGradient(
@@ -440,7 +439,6 @@ struct MotorcycleCollectionCardView: View {
                         )
                     )
                 
-                // Внутренняя подсветка
                 RoundedRectangle(cornerRadius: AdaptiveSize.cornerRadius(20))
                     .stroke(
                         LinearGradient(
@@ -454,7 +452,6 @@ struct MotorcycleCollectionCardView: View {
                         lineWidth: 2
                     )
                 
-                // Внешняя тень
                 RoundedRectangle(cornerRadius: AdaptiveSize.cornerRadius(20))
                     .stroke(colors.orange.opacity(0.5), lineWidth: 1)
             }

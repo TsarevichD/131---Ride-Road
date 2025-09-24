@@ -1,7 +1,6 @@
 //
 //  RideUserMemory.swift
 
-// MARK: - Car Collection Models
 
 struct CarCollection: Codable, Identifiable {
     let id: UUID
@@ -97,15 +96,15 @@ enum CarCondition: String, Codable, CaseIterable {
     var color: String {
         switch self {
         case .excellent:
-            return "#10B981"      // Зеленый
+            return "#10B981"
         case .good:
-            return "#3B82F6"      // Синий
+            return "#3B82F6"
         case .fair:
-            return "#F59E0B"      // Оранжевый
+            return "#F59E0B"
         case .poor:
-            return "#EF4444"      // Красный
+            return "#EF4444"
         case .damaged:
-            return "#6B7280"      // Серый
+            return "#6B7280"
         }
     }
     
@@ -272,7 +271,7 @@ struct Motorcycle: Codable, Identifiable {
     var estimatedValue: Double
     var brand: String
     var year: Int
-    var engineSize: Double // в куб.см
+    var engineSize: Double
     var condition: MotorcycleCondition
     var notes: String
     var createdAt: Date
@@ -319,15 +318,15 @@ enum MotorcycleCondition: String, Codable, CaseIterable {
     var color: String {
         switch self {
         case .excellent:
-            return "#10B981"      // Зеленый
+            return "#10B981"
         case .good:
-            return "#3B82F6"      // Синий
+            return "#3B82F6"
         case .fair:
-            return "#F59E0B"      // Оранжевый
+            return "#F59E0B"
         case .poor:
-            return "#EF4444"      // Красный
+            return "#EF4444"
         case .damaged:
-            return "#6B7280"      // Серый
+            return "#6B7280"
         }
     }
     
@@ -365,23 +364,23 @@ enum MotorcycleType: String, Codable, CaseIterable {
     var emoji: String {
         switch self {
         case .sport:
-            return "🏎️"  // Спортивный мотоцикл
+            return "🏎️"
         case .cruiser:
-            return "🏍️"  // Круизер
+            return "🏍️"
         case .touring:
-            return "🛣️"  // Туристический
+            return "🛣️"
         case .dirt:
-            return "🏔️"  // Внедорожный
+            return "🏔️"
         case .street:
-            return "🏙️"  // Городской
+            return "🏙️"
         case .chopper:
-            return "🔥"  // Чоппер
+            return "🔥"
         case .scooter:
-            return "🛵"  // Скутер
+            return "🛵"
         case .adventure:
-            return "🌍"  // Приключенческий
+            return "🌍"
         case .other:
-            return "🏍️"  // Другие
+            return "🏍️"
         }
     }
     
@@ -446,9 +445,6 @@ class RideUserMemory: ObservableObject {
         }
     }
     
-    
-    // MARK: - Car Collection Management
-    
     private func loadCarCollections() {
         if let data = defaults.data(forKey: carCollectionsKey) {
             let decoder = JSONDecoder()
@@ -503,7 +499,6 @@ class RideUserMemory: ObservableObject {
         return carCollections.first { $0.id == id }
     }
     
-    // MARK: - Motorcycle Collection Management
     
     func addMotorcycleCollection(_ collection: MotorcycleCollection) {
         motorcycleCollections.append(collection)
@@ -523,7 +518,6 @@ class RideUserMemory: ObservableObject {
         return motorcycleCollections.first { $0.id == id }
     }
     
-    // MARK: - Car Management
     
     func addCarToCollection(collectionId: UUID, car: Car) {
         if let index = carCollections.firstIndex(where: { $0.id == collectionId }) {
@@ -547,7 +541,6 @@ class RideUserMemory: ObservableObject {
         return carCollections.first { $0.id == collectionId }?.cars ?? []
     }
     
-    // MARK: - Motorcycle Management
     
     func addMotorcycleToCollection(collectionId: UUID, motorcycle: Motorcycle) {
         if let index = motorcycleCollections.firstIndex(where: { $0.id == collectionId }) {
@@ -631,7 +624,6 @@ class RideUserMemory: ObservableObject {
         ]
     }
     
-    // MARK: - Motorcycle Statistics
     
     func getTotalMotorcycleCount() -> Int {
         return motorcycleCollections.flatMap { $0.motorcycles }.reduce(0) { $0 + $1.quantity }
@@ -673,7 +665,6 @@ class RideUserMemory: ObservableObject {
         ]
     }
     
-    // MARK: - Onboarding Management
     
     func completeOnboarding() {
         hasCompletedOnboarding = true
