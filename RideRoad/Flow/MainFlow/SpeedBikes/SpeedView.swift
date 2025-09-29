@@ -481,7 +481,6 @@ struct MotorcycleCollectionCardView: View {
     }
 }
 
-// MARK: - Add Motorcycle Collection View
 struct AddMotorcycleCollectionView: View {
     @Binding var collectionName: String
     @Binding var collectionLocation: String
